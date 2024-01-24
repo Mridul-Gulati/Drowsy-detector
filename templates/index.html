@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Drowsiness Detection App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Drowsiness Detection App</h1>
+    </div>
+
+    <div class="container">
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" alt="Video Stream">
+        </div>
+        <audio id="alertSound" preload="auto">
+            <source src="{{ url_for('static', filename='mixkit-rooster-crowing-in-the-morning-2462.mp3') }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Mridul-Gulati. All rights reserved.</p>
+    </div>
+    
+</body>
+
+</html>
