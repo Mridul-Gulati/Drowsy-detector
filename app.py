@@ -9,7 +9,7 @@ app = Flask(__name__,static_folder='static')
 
 predictor_path = 'shape_predictor_68_face_landmarks.dat'
 
-cap = cv2.VideoCapture(cv2.CAP_ANY)
+cap = cv2.VideoCapture(0,cv2.CAP_ANY)
 # cap = VideoStream(src=0).start()
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(predictor_path)
