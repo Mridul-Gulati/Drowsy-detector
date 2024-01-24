@@ -14,11 +14,11 @@ cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(predictor_path)
 
-pygame.mixer.init()
-alert_sound = pygame.mixer.Sound("static/mixkit-rooster-crowing-in-the-morning-2462.mp3")
+# pygame.mixer.init()
+# alert_sound = pygame.mixer.Sound("static/mixkit-rooster-crowing-in-the-morning-2462.mp3")
 
-def playAlertSound():
-    alert_sound.play()
+# def playAlertSound():
+#     alert_sound.play()
 
 sleep = 0
 drowsy = 0
@@ -79,7 +79,7 @@ def gen_frames():
                     if sleep > 8:
                         status = "SLEEPING !!!"
                         color = (255, 0, 0)
-                        playAlertSound()
+                        # playAlertSound()
 
                 elif 0.21 < left_blink == 1 or right_blink == 1:
                     sleep = 0
@@ -88,7 +88,7 @@ def gen_frames():
                     if drowsy > 8:
                         status = "Drowsy !"
                         color = (0, 0, 255)
-                        playAlertSound()
+                        # playAlertSound()
                 else:
                     drowsy = 0
                     sleep = 0
