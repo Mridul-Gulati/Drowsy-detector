@@ -1,4 +1,4 @@
-dlib==19.24.2
+dlib-bin
 Flask==3.0.1
 imutils==0.5.4
 numpy==1.26.3
