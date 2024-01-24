@@ -7,7 +7,7 @@ import pygame
 
 app = Flask(__name__,static_folder='static')
 
-predictor_path = 'https://github.com/italojs/facial-landmarks-recognition/blob/master/shape_predictor_68_face_landmarks.dat'
+predictor_path = 'shape_predictor_68_face_landmarks.dat'
 
 cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
 # cap = VideoStream(src=0).start()
