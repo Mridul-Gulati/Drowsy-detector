@@ -6,4 +6,4 @@ dlib-bin
 cmake
 opencv-python-headless
 pathlib
-streamlit_webrtc
+streamlit-webrtc
