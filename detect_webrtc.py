@@ -7,11 +7,17 @@ import av
 import cv2
 from pathlib import Path
 
-model_path = Path(__file__).parent / "shape_predictor_68_face_landmarks.dat"
-st.title("Drowsiness Detection App")
+# Assuming your file is in the same directory as your script
+file_path = Path('/mount/src/drowsy-detector/shape_predictor_68_face_landmarks.dat')
+
+# Convert the Path object to a string
+model_path_str = str(file_path)
+
+# Now use the string representation when creating the shape predictor
+
 status_placeholder = st.empty()
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor(model_path)
+predictor = dlib.shape_predictor(model_path_str)
 
 def compute(ptA, ptB):
     dist = np.linalg.norm(ptA - ptB)
