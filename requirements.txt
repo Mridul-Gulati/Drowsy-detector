@@ -1,7 +1,7 @@
+streamlit
+imutils
+numpy
+pygame
 dlib-bin
-imutils==0.5.4
-numpy==1.26.3
+cmake
 opencv-python-headless
-streamlit==1.30.0
-streamlit_webrtc
-av
