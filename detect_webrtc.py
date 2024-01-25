@@ -5,11 +5,13 @@ import numpy as np
 from streamlit_webrtc import webrtc_streamer
 import av
 import cv2
+from pathlib import Path
 
+model_path = Path(__file__).parent / "shape_predictor_68_face_landmarks.dat"
 st.title("Drowsiness Detection App")
 status_placeholder = st.empty()
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+predictor = dlib.shape_predictor(model_path)
 
 def compute(ptA, ptB):
     dist = np.linalg.norm(ptA - ptB)
