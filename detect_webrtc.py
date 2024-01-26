@@ -11,7 +11,7 @@ from pathlib import Path
 file_path = Path('shape_predictor_68_face_landmarks.dat')
 
 # Convert the Path object to a string
-model_path_str = str(file_path)
+model_path_str = str(file_path.absolute())
 
 # Now use the string representation when creating the shape predictor
 
