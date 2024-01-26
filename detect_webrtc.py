@@ -8,7 +8,7 @@ import cv2
 from pathlib import Path
 
 # Assuming your file is in the same directory as your script
-file_path = Path('/mount/src/drowsy-detector/shape_predictor_68_face_landmarks.dat')
+file_path = Path('shape_predictor_68_face_landmarks.dat')
 
 # Convert the Path object to a string
 model_path_str = str(file_path)
